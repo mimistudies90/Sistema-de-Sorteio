@@ -58,66 +58,43 @@ bash
 git clone https://github.com/mimistudies90/Sistema-de-Sorteio.git
 cd 
 
- 3. Instale as dependências: bash
+ 2. Instale as dependências:
+ git,xamp
 
 
- 4. Configure o banco de dados:
-  ◦ Crie o banco no MySQL
-  ◦ Execute o script SQL:
-sql
-source database/schema.sql;
- ◦ Configure as credenciais no `.env`
+ 3. Configure o banco de dados:
+ Aqui está a versão estruturada e organizada do seu passo a passo para configurar o banco de dados MySQL:
 
+4. Configure o banco de dados:
+Coloque a senha do bd da sua maquina lócal na pasta 'conexao.php'
 
 5. Inicie o servidor:
 http://localhost/
 
 
-## 4 Estrutura do Banco de Dados ### **Usuários (users)**
+## 4 Estrutura do Banco de Dados ### **Usuários (usuario)**
     • `id` (SMALLINT, PK, AUTO_INCREMENT)
     • `nome` (VARCHAR)
     • `email` (VARCHAR, UNIQUE)
     • `senha` (VARCHAR)
-    • criado_em (FK -> users.id)
+    • criado_em (DATETIME)
     
 ### **Sorteios (sorteio)**
     • `id` (SMALLINT, PK, AUTO_INCREMENT)
     • `nome` (VARCHAR)
-    • `email` (VARCHAR)
-    • `usuario_id` (FK -> users.id)
+    • `descricao` (VARCHAR)
+    • 'criado_em' (DATETIME)
+    • 'atualizado_em' (DATETIME)
+    • `usuario_id` (FK -> usuario.id)
 
-
-## 5 Rotas da Aplicação
-| Método | Rota	| Descrição
-
-
-
-
-|
-|	|	|
-| GET | `/`	| Página inicial
-| GET | `/login` | Tela de login
-
-|
-
-
-
-|
-|
-| POST | `/login` | Autenticação do usuário |
-| GET | `/posts` | Lista todos os posts	|
-| POST | `/posts` | Cria um novo post	|
-
-
-
-
-
-
-
-## 8 Deploy e Hospedagem
-### **Configuração no Servidor**
-    1. Configure um servidor Apache/Nginx
-    2. 
+### **Paticipantes (participantes)**
+    • `id` (SMALLINT, PK, AUTO_INCREMENT)
+    • `nome` (VARCHAR)
+    • `telefone` (VARCHAR)
+    • 'posicao' (TINYINT)
+    • 'criado_em' (DATETIME)
+    • 'atualizado_em' (DATETIME)
+    • `sorteios_id` (FK -> sorteio.id)
 
 
     
