@@ -8,7 +8,7 @@
     • **Tecnologias Utilizadas:** PHP, MySQL, HTML, CSS, JavaScript,Visula Studio Code
     • **Autor(es):** [Maria Cecília da Conceição Pinto,Melissa de Faria Martins,Pedro Augusto Moreira da Costa,
 Pietra Massarotti]
-    • **Data de início:** [DD/MM/AAAA]
+    • **Data de início:** [17/03/2007]
 
 
 ## 2 Estrutura do Projeto
