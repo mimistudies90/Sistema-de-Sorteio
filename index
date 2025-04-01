@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $existeUser = $resultado->fetch_assoc();
 
     if (!empty($existeUser)) {
-        $erro = "Esse usuário já existe!";
+        $erro = "Esse e-mail já está sendo usado!";
     } else {
         if (empty($nome) || empty($email) || empty($senha)) {
             $erro = "Preencha todos os campos!";
