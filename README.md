@@ -53,40 +53,37 @@ Pietra Massarotti]
     • Sistema operacinal: Windows 11;
     ### **Instalação**
     
-    1. Clone o repositório:
+1. Clone o repositório:
 bash
-git clone https://github.com/usuario/projeto.git cd projeto
+git clone https://github.com/mimistudies90/Sistema-de-Sorteio.git
+cd 
 
-    2. Instale as dependências: bash
-composer install
+ 3. Instale as dependências: bash
 
 
-    3. Configure o banco de dados:
-        ◦ Crie o banco no MySQL
-        ◦ Execute o script SQL:
+ 4. Configure o banco de dados:
+  ◦ Crie o banco no MySQL
+  ◦ Execute o script SQL:
 sql
 source database/schema.sql;
+ ◦ Configure as credenciais no `.env`
 
 
-        ◦ Configure as credenciais no `.env`
-
-
-    4. Inicie o servidor:
-bash
-php -S localhost:8000 -t public
+5. Inicie o servidor:
+http://localhost/
 
 
 ## 4 Estrutura do Banco de Dados ### **Usuários (users)**
-    • `id` (INT, PK, AUTO_INCREMENT)
+    • `id` (SMALLINT, PK, AUTO_INCREMENT)
     • `nome` (VARCHAR)
     • `email` (VARCHAR, UNIQUE)
     • `senha` (VARCHAR)
-
-
-### **Posts (posts)**
-    • `id` (INT, PK, AUTO_INCREMENT)
-    • `titulo` (VARCHAR)
-    • `conteudo` (TEXT)
+    • criado_em (FK -> users.id)
+    
+### **Sorteios (sorteio)**
+    • `id` (SMALLINT, PK, AUTO_INCREMENT)
+    • `nome` (VARCHAR)
+    • `email` (VARCHAR)
     • `usuario_id` (FK -> users.id)
 
 
@@ -112,16 +109,9 @@ php -S localhost:8000 -t public
 | POST | `/posts` | Cria um novo post	|
 
 
-## 6 Segurança e Boas Práticas
-    • Hash de senhas com `password_hash()`
-    • Proteção contra SQL Injection com **PDO e prepared statements**
-    • Proteção contra CSRF com tokens
-    • Validação e sanitização de entrada de dados
 
 
-## 7 Testes
-    • Testes de unidade com PHPUnit
-    • Testes de integração das rotas principais
+
 
 
 ## 8 Deploy e Hospedagem
