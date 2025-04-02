@@ -18,7 +18,7 @@ if (!$resultado) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/tabela.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/tabela.css" media="screen" />
     <title>Sistema de sorteio</title>
 </head>
 
@@ -26,7 +26,7 @@ if (!$resultado) {
     <h1>Bem-vindo ao Sistema de Sorteio!</h1>
 
     <h2>Participantes</h2>
-    <a href="/SistemaSorteio/criarParticipante.php?sorteios_id=<?= $sorteios_id ?>">Adicionar novo participante</a>
+    <a href="/PHP/criarParticipante.php?sorteios_id=<?= $sorteios_id ?>">Adicionar novo participante</a>
 
     <table>
         <thead>
@@ -51,9 +51,9 @@ if (!$resultado) {
                     <td><?= $row['atualizado_em'] ?></td>
                     <div class="btn-actions">
                         <td>
-                            <a href="editarParticipante.php?id=<?= $row['id'] ?>&sorteios_id=<?= $sorteios_id ?>" class="btn btn-edit">Editar</a>
+                            <a href="/PHP/editarParticipante.php?id=<?= $row['id'] ?>&sorteios_id=<?= $sorteios_id ?>" class="btn btn-edit">Editar</a>
 
-                            <a href="deletarParticipante.php?id=<?= $row['id'] ?>&sorteios_id=<?= $sorteios_id ?>" class="btn btn-delete">Excluir</a>
+                            <a href="/PHP/deletarParticipante.php?id=<?= $row['id'] ?>&sorteios_id=<?= $sorteios_id ?>" class="btn btn-delete">Excluir</a>
                         </td>
                     </div>
                 </tr>
@@ -69,7 +69,7 @@ if (!$resultado) {
             <input type="submit" value="Realizar Sorteio">
         </form>
 
-        <a href="/SistemaSorteio/lerSorteio.php" class="btn btn-exit">Ver seus sorteios</a>
+        <a href="/PHP/lerSorteio.php" class="btn btn-exit">Ver seus sorteios</a>
     </div>
 
 
