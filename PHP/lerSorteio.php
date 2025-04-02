@@ -23,14 +23,14 @@ if (!$resultado) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/tabela.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/tabela.css" media="screen" />
     <title>Sistema de sorteio</title>
 </head>
 
 <body>
     <h1>Bem vindo!</h1>
     <h2>Meus sorteios:</h2>
-    <a href="/SistemaSorteio/criarSorteio.php">Criar novo sorteio</a>
+    <a href="/PHP/criarSorteio.php">Criar novo sorteio</a>
     <br>
     <table>
         <thead>
@@ -51,7 +51,7 @@ if (!$resultado) {
             while ($row = $resultado->fetch_assoc()): ?>
                 <tr>
                     <td>
-                        <a href='/SistemaSorteio/lerParticipante.php?sorteios_id=<?= $row['id'] ?>'>Entrar</a>
+                        <a href='/PHP/lerParticipante.php?sorteios_id=<?= $row['id'] ?>'>Entrar</a>
                     </td>
                     <td><?= $row["id"] ?></td>
                     <td><?= $row['nome'] ?></td>
@@ -60,8 +60,8 @@ if (!$resultado) {
                     <td><?= $row['atualizado_em'] ?></td>
                     <div class="btn-actions">
                         <td>
-                            <a href="/SistemaSorteio/editarSorteio.php?id=<?= $row['id'] ?>" class="btn btn-edit">Editar</a>
-                            <a href='/SistemaSorteio/deletarSorteio.php?id=<?= $row['id'] ?>' class="btn btn-delete">Deletar</a>
+                            <a href="/PHP/editarSorteio.php?id=<?= $row['id'] ?>" class="btn btn-edit">Editar</a>
+                            <a href='/PHP/deletarSorteio.php?id=<?= $row['id'] ?>' class="btn btn-delete">Deletar</a>
                         </td>
                     </div>
                 </tr>
