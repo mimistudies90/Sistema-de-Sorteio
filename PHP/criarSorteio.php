@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/form.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/form.css" media="screen" />
     <title>Sistema de sorteio</title>
 </head>
 
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
 
         <input type="submit" Value="Criar" class="botao">
-        <a class="botao" href='/SistemaSorteio/lerSorteio.php'>Cancelar</a>
+        <a class="botao" href='/PHP/lerSorteio.php'>Cancelar</a>
     </form>
 </body>
 
