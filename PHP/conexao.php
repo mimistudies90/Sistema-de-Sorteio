@@ -1,7 +1,5 @@
 <?php
 
-//Banco Lab 5/6: $senha = "&tec77@info!"
-
 $hostname = "localhost";
 $usuario = "root";
 $senha = "&tec77@info!";
